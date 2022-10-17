@@ -1,9 +1,11 @@
 <script setup lang="ts">
-
-const msg = "World!";
-
-const { data: response } = useLazyFetch(`/api/msg/${msg}`);
-
+const userId = ref({ id: 'userId' });
+// const { data } = useLazyFetch('/api/user/:id')
+const { data } = useLazyFetch(`/api/user/${userId.value.id}`);
+const { data: msg } = useLazyFetch(`/api/user/${userId.value.id}`, {
+  method: 'PUT',
+});
+// const { data } = useLazyFetch(`/api/user/${userId.value.id}/nestRoute`)
 </script>
 
 <template>

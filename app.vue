@@ -2,7 +2,7 @@
 
 const msg = "World!";
 
-const { data: response } = await useFetch(`/api/msg/${msg}`);
+const { data: response } = useFetch(`/api/msg/${msg}`);
 
 </script>
 

@@ -1,4 +1,4 @@
-import { ApiResponse } from "./res/ApiResponse";
+import { ApiResponse } from "../res/ApiResponse";
 
 export default defineEventHandler(async (event) => {
   return new ApiResponse<{ msg: string }>({
